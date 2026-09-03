@@ -23,7 +23,7 @@ function envSnapshot() {
     BOT_TOKEN:      process.env.BOT_TOKEN       || '',
     DB_CHANNEL_ID:  process.env.DB_CHANNEL_ID   || '',
     OWNER_ID:       process.env.OWNER_ID        || '',
-    SERVER_URL:     process.env.SERVER_URL      || 'http://localhost:3000',
+    SERVER_URL:     process.env.SERVER_URL      || process.env.RENDER_EXTERNAL_URL || 'http://localhost:3000',
     PORT:           process.env.PORT            || '3000',
     TG_SESSION:     process.env.TG_SESSION      || '',
   };

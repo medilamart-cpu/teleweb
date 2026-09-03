@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: vinnoflow
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: MONGO_URI
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: DB_CHANNEL_ID
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: TG_SESSION
+        sync: false
